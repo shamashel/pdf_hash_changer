@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pdf-hash-changer"
+version = "0.1.0"
+description = "Script to create a copy of a PDF file with modified hash by appending random text"
+authors = [{name = "Mike"}]
+requires-python = ">=3.7,<4"
+dependencies = [
+    "PyPDF2>=3.0.0",
+    "reportlab>=3.6.0",
+]
+
+[project.scripts]
+hash-modifier = "hash_modifier:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["hash_modifier.py"]
+
