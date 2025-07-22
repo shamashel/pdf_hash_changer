@@ -23,13 +23,13 @@ uv sync
 
 ```bash
 # Basic usage - creates a copy with "_modified_1" suffix
-python hash_modifier.py input.pdf
+uv run hash-modifier input.pdf
 
 # Specify output filename
-python hash_modifier.py input.pdf output.pdf
+uv run hash-modifier input.pdf output.pdf
 
 # Specify random text length (default: 50 characters)
-python hash_modifier.py input.pdf output.pdf 100
+uv run hash-modifier input.pdf output.pdf 100
 ```
 
 ### As a Module
@@ -54,7 +54,7 @@ output_path = modify_pdf_hash("input.pdf", "output.pdf", random_text_length=75)
 
 ```bash
 # Create a modified copy of document.pdf
-python hash_modifier.py document.pdf
+uv run hash-modifier document.pdf
 
 # Output: document_modified_1.pdf (with different hash than original)
 ```
